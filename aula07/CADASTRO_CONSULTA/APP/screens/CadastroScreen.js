@@ -10,7 +10,7 @@ const CadastroScreen = () => {
 
   const handleCadastro = async () => {
     try {
-      const response = await axios.post('http://192.168.10.10:3000/cadastro', {
+      const response = await axios.post('http://10.68.153.31:3000/cadastro', {
         nome,
         email,
         senha,
@@ -27,7 +27,7 @@ const CadastroScreen = () => {
 
   const fetchUsuarios = async () => {
     try {
-      const response = await axios.get('http://192.168.10.10:3000/usuarios');
+      const response = await axios.get('http://10.68.153.31:3000/usuarios');
       setUsuarios(response.data);
     } catch (error) {
       console.error('Erro ao buscar dados:', error);
@@ -35,7 +35,7 @@ const CadastroScreen = () => {
   };
 
   useEffect(() => {
-    fetchUsuarios();
+      fetchUsuarios();
   }, []);
 
   return (
